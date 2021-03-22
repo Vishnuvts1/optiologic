@@ -1,0 +1,69 @@
+﻿@model IEnumerable<Optiologicsample.Models.employee>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        @*<th>
+            @Html.DisplayNameFor(model => model.empid)
+        </th>*@
+        <th>
+            @Html.DisplayNameFor(model => model.empfirstname)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.emplastname)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.empemail)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.empdob)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Gender)
+        </th>
+        @*<th>
+            @Html.DisplayNameFor(model => model.emppassword)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.empconfirmpassword)
+        </th>*@
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        @*<td>
+            @Html.DisplayFor(modelItem => item.empid)
+        </td>*@
+        <td>
+            @Html.DisplayFor(modelItem => item.empfirstname)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.emplastname)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.empemail)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.empdob)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Gender)
+        </td>
+        @*<td>
+            @Html.DisplayFor(modelItem => item.emppassword)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.empconfirmpassword)
+        </td>*@
+        <td>
+            @Html.ActionLink("Edit", "Edit", new {  id=item.empid  }) 
+           @* @Html.ActionLink("Details", "Details", new { id = item.empid })*@ 
+            @Html.ActionLink("Delete", "Delete", new { id = item.empid })
+        </td>
+    </tr>
+}
+
+</table>
